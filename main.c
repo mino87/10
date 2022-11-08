@@ -7,26 +7,15 @@
 
 int main(int argc, char *argv[]){
 	
-	FILE*fp;
-	char str[30];
+	FILE*fp=NULL;
+	char c;
+	fp=fopen("sample.txt","r");
 	
-	fp = fopen("sample.txt","w");
 	
-    printf("input a word : ");
-    
-	scanf("%s",str);
-	fprintf(fp,"%s", str);
-
-    printf("input a word : ");
-    
-	scanf("%s",str);
-	fprintf(fp,"%s", str);
-	
-    printf("input a word : ");
-    
-	scanf("%s",str);
-	fprintf(fp,"%s", str);
-
+	while((c=fgetc(fp))!= EOF)
+	    putchar(c);
 	
 	fclose(fp);
+	return 0;
+
 }
