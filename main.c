@@ -6,11 +6,10 @@
 
 
 void main(void){
-	char src[]="The worst things to eat before you sleep";
-	char dst[100];
 	
-	strcpy(dst,src);
+	char str[30]="happy c programming";
 	
-	printf("copied string : %s",dst);  
-
+	printf("문자열%s의 길이 : %i\n",str,strlen(str));
+	return 0;
 }
+
